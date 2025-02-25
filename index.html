@@ -7,16 +7,28 @@
     <title>Library</title>
 </head>
 <body>
+    <button id="open-form">New Book</button>
     <main id="Library">
+        <div id="number-of-books"></div>
         <!-- new books get added here as div -->
     </main>
     <dialog id="book-dialog">
         <form action="" method="dialog" id="book-form">
-            <label for="">Book Info</label>
-            <input type="text" name="title" placeholder="title" id="book-title">
-            <input type="text" name="author" placeholder="author" id="book-author">
-            <input type="date" name="publicationDate" placeholder="date" id="book-publication-date">
+            <h3>book information</h2>
+
+            <label for="book-title">Title:</label>
+            <input type="text" name="title" placeholder="title" id="book-title" required>
+            
+            <label for="book-author">Author:</label>
+            <input type="text" name="author" placeholder="author" id="book-author" required>
+            
+            <label for="book-publication-date">Published:</label>
+            <input type="date" name="publicationDate" id="book-publication-date">
+            
+            <label for="book-pages">Pages:</label>
             <input type="number" name="pages" placeholder="pages" id="book-pages">
+            
+            <label for="book-reading-status">Reading Status:</label>
             <select name="readingStatus" id="book-reading-status">
                 <option selected disabled value="n/a">status</option>
                 <option value="Read">Read</option>
@@ -26,7 +38,6 @@
             <button type="submit" id="close-form">Add to Library</button>
         </form>
     </dialog>
-    <button id="open-form">New Book</button>
     <script src="scripts.js"></script>
 </body>
 </html>
